@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="border-b border-white/15">
+<nav x-data="{ open: false }" class="sticky top-0 z-50 border-b border-white/15 bg-bg-primary/80 backdrop-blur-md">
     <div class="container-custom">
 
         <div class="flex items-center justify-between h-20">
@@ -44,12 +44,19 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div x-cloak x-show="open" x-transition:enter="transition ease-out duration-300"
-            x-transition:enter-start="opacity-0 -translate-y-6" x-transition:enter-end="opacity-100 translate-y-0"
-            x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0"
-            x-transition:leave-end="opacity-0 -translate-y-6" class="fixed inset-0 z-50 bg-bg-primary md:hidden">
+        <div
+            x-cloak
+            x-show="open"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 -translate-y-6"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-200"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-6"
+            class="fixed inset-0 z-[999] bg-[#020B1E] md:hidden"
+>
 
-            <div class="container-custom">
+            <div class="container-custom bg-[#020B1E]">
 
                 <div class="flex items-center justify-between h-20 border-b border-white/15">
 
