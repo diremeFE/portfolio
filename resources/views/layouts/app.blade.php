@@ -8,7 +8,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
+<body class="bg-bg-primary text-text-primary font-sans">
 
     @yield('content')
 
