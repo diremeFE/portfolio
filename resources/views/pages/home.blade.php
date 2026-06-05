@@ -4,19 +4,21 @@
     <x-navbar />
 
 
-    <section class="relative overflow-hidden min-h-[calc(100vh-80px)]">
+    <section class="relative overflow-hidden min-h-[calc(100vh-80px)] fade-up">
 
         <!-- Radial Gradient -->
-        <div class="absolute inset-0 pointer-events-none"
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+           w-[900px] h-[650px]
+           pointer-events-none"
             style="
-            background:
-            radial-gradient(
-                circle at center,
-                rgba(182,189,209,.25) 0%,
-                rgba(182,189,209,.10) 35%,
-                rgba(2,11,30,0) 70%
-            );
-        ">
+        background:
+        radial-gradient(
+            ellipse at center,
+            rgba(182,189,209,.18) 0%,
+            rgba(182,189,209,.08) 35%,
+            rgba(2,11,30,0) 75%
+        );
+    ">
         </div>
 
         <div class="container-custom relative z-10">
@@ -70,7 +72,7 @@
     </section>
 
 
-    <section id="about" class="section">
+    <section id="about" class="section fade-up">
 
         <div class="container-custom">
 
@@ -134,6 +136,16 @@
                         <p>VS Code</p>
                     </div>
 
+                    <div>
+                        <img src="{{ asset('icons/framer.svg') }}" class="h-16 mb-3">
+                        <p>Framer</p>
+                    </div>
+
+                    <div>
+                        <img src="{{ asset('icons/shopify.svg') }}" class="h-16 mb-3">
+                        <p>Shopify</p>
+                    </div>
+
                 </div>
 
             </div>
@@ -147,7 +159,7 @@
 
                 <div class="space-y-14">
 
-                    <div>
+                    <div class="fade-up">
                         <h4 class="font-bold uppercase mb-2">
                             Educación Secundaria Obligatoria
                         </h4>
@@ -165,7 +177,7 @@
                         </p>
                     </div>
 
-                    <div>
+                    <div class="fade-up">
                         <h4 class="font-bold uppercase mb-2">
                             Grado Medio (Sistemas Microinformáticos y Redes)
                         </h4>
@@ -182,7 +194,7 @@
                         </p>
                     </div>
 
-                    <div>
+                    <div class="fade-up">
                         <h4 class="font-bold uppercase mb-2">
                             Grado Superior (Desarrollo de Aplicaciones Web)
                         </h4>
@@ -209,7 +221,7 @@
     </section>
 
 
-    <section id="projects" class="section">
+    <section id="projects" class="section fade-up">
 
         <div class="container-custom">
 
@@ -220,7 +232,7 @@
             <div class="space-y-24">
 
                 <!-- DRAGON BOAT -->
-                <article class="grid md:grid-cols-[120px_1fr] gap-8 items-start">
+                <article class="grid md:grid-cols-[120px_1fr] gap-8 items-start fade-up">
 
                     <img src="{{ asset('images/projects/dragonboat.png') }}" alt="Dragon Boat Marina Valencia"
                         class="w-28 md:w-32 object-contain">
@@ -242,17 +254,26 @@
                             colaboradoras.
                         </p>
 
-                        <a href="#" target="_blank"
-                            class="inline-flex items-center gap-3 mt-8 px-6 py-3 bg-white text-black rounded-full">
-                            Visitar web →
-                        </a>
+                        <div class="flex flex-wrap gap-4 mt-8">
+
+                            <a href="https://webreal.com" target="_blank"
+                                class="inline-flex items-center gap-3 px-6 py-3 bg-white text-black rounded-full">
+                                Visitar web →
+                            </a>
+
+                            <a href="{{ route('projects.dragon-boat') }}"
+                                class="inline-flex items-center gap-3 px-6 py-3 border border-white rounded-full">
+                                Leer caso →
+                            </a>
+
+                        </div>
 
                     </div>
 
                 </article>
 
                 <!-- IRON SHARK -->
-                <article class="grid md:grid-cols-[120px_1fr] gap-8 items-start">
+                <article class="grid md:grid-cols-[120px_1fr] gap-8 items-start fade-up">
 
                     <img src="{{ asset('images/projects/ironshark.png') }}" alt="Iron Shark"
                         class="w-28 md:w-32 object-contain">
@@ -273,17 +294,26 @@
                             productos y facilitar la venta directa a través de internet.
                         </p>
 
-                        <a href="#" target="_blank"
-                            class="inline-flex items-center gap-3 mt-8 px-6 py-3 bg-white text-black rounded-full">
-                            Visitar web →
-                        </a>
+                        <div class="flex flex-wrap gap-4 mt-8">
+
+                            <a href="https://webreal.com" target="_blank"
+                                class="inline-flex items-center gap-3 px-6 py-3 bg-white text-black rounded-full">
+                                Visitar web →
+                            </a>
+
+                            <a href="{{ route('projects.ironshark') }}"
+                                class="inline-flex items-center gap-3 px-6 py-3 border border-white rounded-full">
+                                Leer caso →
+                            </a>
+
+                        </div>
 
                     </div>
 
                 </article>
 
                 <!-- ZAIRA -->
-                <article class="grid md:grid-cols-[120px_1fr] gap-8 items-start">
+                <article class="grid md:grid-cols-[120px_1fr] gap-8 items-start fade-up">
 
                     <img src="{{ asset('images/projects/zaira.png') }}" alt="Zaira Psicología"
                         class="w-28 md:w-32 object-contain">
@@ -305,17 +335,27 @@
                             comunicación clara y cercana.
                         </p>
 
-                        <a href="#" target="_blank"
-                            class="inline-flex items-center gap-3 mt-8 px-6 py-3 bg-white text-black rounded-full">
-                            Visitar web →
-                        </a>
+                        <div class="flex flex-wrap gap-4 mt-8">
+
+                            <a href="https://webreal.com" target="_blank"
+                                class="inline-flex items-center gap-3 px-6 py-3 bg-white text-black rounded-full">
+                                Visitar web →
+                            </a>
+
+                            <a href="{{ route('projects.zaira') }}"
+                                class="inline-flex items-center gap-3 px-6 py-3 border border-white rounded-full">
+                                Leer caso →
+                            </a>
+
+
+                        </div>
 
                     </div>
 
                 </article>
 
                 <!-- GEOLINDES -->
-                <article class="grid md:grid-cols-[120px_1fr] gap-8 items-start">
+                <article class="grid md:grid-cols-[120px_1fr] gap-8 items-start fade-up">
 
                     <img src="{{ asset('images/projects/geolindes.png') }}" alt="Geolindes"
                         class="w-28 md:w-32 object-contain">
@@ -337,17 +377,26 @@
                             de lindes.
                         </p>
 
-                        <a href="#" target="_blank"
-                            class="inline-flex items-center gap-3 mt-8 px-6 py-3 bg-white text-black rounded-full">
-                            Visitar web →
-                        </a>
+                        <div class="flex flex-wrap gap-4 mt-8">
+
+                            <a href="https://webreal.com" target="_blank"
+                                class="inline-flex items-center gap-3 px-6 py-3 bg-white text-black rounded-full">
+                                Visitar web →
+                            </a>
+
+                            <a href="{{ route('projects.geolindes') }}"
+                                class="inline-flex items-center gap-3 px-6 py-3 border border-white rounded-full">
+                                Leer caso →
+                            </a>
+
+                        </div>
 
                     </div>
 
                 </article>
 
                 <!-- GRUPO MARINA 1993 -->
-                <article class="grid md:grid-cols-[120px_1fr] gap-8 items-start">
+                <article class="grid md:grid-cols-[120px_1fr] gap-8 items-start fade-up">
 
                     <img src="{{ asset('images/projects/marina1993.png') }}" alt="Grupo Marina 1993"
                         class="w-28 md:w-32 object-contain">
@@ -369,17 +418,26 @@
                             celebraciones.
                         </p>
 
-                        <a href="#" target="_blank"
-                            class="inline-flex items-center gap-3 mt-8 px-6 py-3 bg-white text-black rounded-full">
-                            Visitar web →
-                        </a>
+                        <div class="flex flex-wrap gap-4 mt-8">
+
+                            <a href="https://webreal.com" target="_blank"
+                                class="inline-flex items-center gap-3 px-6 py-3 bg-white text-black rounded-full">
+                                Visitar web →
+                            </a>
+
+                            <a href="{{ route('projects.grupo-marina-1993') }}"
+                                class="inline-flex items-center gap-3 px-6 py-3 border border-white rounded-full">
+                                Leer caso →
+                            </a>
+
+                        </div>
 
                     </div>
 
                 </article>
 
                 <!-- MASÍA VISTALEGRE -->
-                <article class="grid md:grid-cols-[120px_1fr] gap-8 items-start">
+                <article class="grid md:grid-cols-[120px_1fr] gap-8 items-start fade-up">
 
                     <img src="{{ asset('images/projects/masia.png') }}" alt="Masía Vistalegre"
                         class="w-28 md:w-32 object-contain">
@@ -400,11 +458,19 @@
                             servicios y facilitando la captación de nuevos clientes.
                         </p>
 
-                        <a href="#" target="_blank"
-                            class="inline-flex items-center gap-3 mt-8 px-6 py-3 bg-white text-black rounded-full">
-                            Visitar web →
-                        </a>
+                        <div class="flex flex-wrap gap-4 mt-8">
 
+                            <a href="https://webreal.com" target="_blank"
+                                class="inline-flex items-center gap-3 px-6 py-3 bg-white text-black rounded-full">
+                                Visitar web →
+                            </a>
+
+                            <a href="{{ route('projects.masia-vistalegre') }}"
+                                class="inline-flex items-center gap-3 px-6 py-3 border border-white rounded-full">
+                                Leer caso →
+                            </a>
+
+                        </div>
                     </div>
 
                 </article>
@@ -416,74 +482,169 @@
     </section>
 
 
-    <footer id="contact" class="border-t border-white/15">
+    <section id="contact" class="section fade-up">
 
-    <div class="container-custom py-12">
+        <div class="container-custom max-w-4xl">
 
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+            <div class="text-center mb-12">
 
-            <!-- Info -->
-            <div>
+                <h2 class="hero-title heading-2 font-extralight mb-4">
+                    ¿Tienes un proyecto en mente?
+                </h2>
 
-                <h3 class="text-xl font-semibold">
-                    Diego Requena
-                </h3>
-
-                <p class="text-text-secondary mt-2">
-                    UX/UI Designer & Web Designer
+                <p class="body-large text-text-secondary max-w-2xl mx-auto">
+                    Estoy disponible para colaborar en proyectos de diseño UI,
+                    diseño web y desarrollo web. Cuéntame tu idea y te responderé
+                    lo antes posible.
                 </p>
 
             </div>
 
-            <!-- Navegación -->
-            <div class="flex flex-wrap gap-6">
+            @if ($errors->any())
+                <div class="mb-6 p-4 rounded-lg border border-red-500 text-red-400">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            @if (session('success'))
+                <div class="mb-6 p-4 rounded-lg border border-green-500 text-green-400">
+                    {{ session('success') }}
+                </div>
+            @endif
 
-                <a href="#about" class="hover:text-accent transition">
-                    Sobre mí
-                </a>
+            <form action="{{ route('contact.send') }}" method="POST" id="contact-form" class="space-y-6">
+                @csrf
 
-                <a href="#projects" class="hover:text-accent transition">
-                    Casos reales
-                </a>
+                <div class="grid md:grid-cols-2 gap-6">
 
-                <a href="#contact" class="hover:text-accent transition">
-                    Contacto
-                </a>
+                    <div>
+                        <label class="block mb-2 text-sm">
+                            Nombre
+                        </label>
 
-            </div>
+                        <input type="text" required name="name" value="{{ old('name') }}"
+                            placeholder="Tu nombre"
+                            class="w-full px-4 py-4 rounded-lg border border-white/15 bg-transparent focus:outline-none focus:border-accent">
+                    </div>
 
-            <!-- Redes -->
-            <div class="flex items-center gap-4">
+                    <div>
+                        <label class="block mb-2 text-sm">
+                            Correo electrónico
+                        </label>
 
-                <a href="TU_INSTAGRAM" target="_blank">
-                    <img
-                        src="{{ asset('icons/instagram.svg') }}"
-                        alt="Instagram"
-                        class="w-5 h-5"
-                    >
-                </a>
+                        <input type="email" required name="email" value="{{ old('email') }}"
+                            placeholder="tu@email.com"
+                            class="w-full px-4 py-4 rounded-lg border border-white/15 bg-transparent focus:outline-none focus:border-accent">
+                    </div>
 
-                <a href="TU_LINKEDIN" target="_blank">
-                    <img
-                        src="{{ asset('icons/linkedin.svg') }}"
-                        alt="LinkedIn"
-                        class="w-5 h-5"
-                    >
+                </div>
+
+                <div>
+                    <label class="block mb-2 text-sm">
+                        Empresa (Opcional)
+                    </label>
+
+                    <input type="text" name="company" value="{{ old('company') }}"
+                        placeholder="Nombre de la empresa"
+                        class="w-full px-4 py-4 rounded-lg border border-white/15 bg-transparent focus:outline-none focus:border-accent">
+                </div>
+
+                <div>
+                    <label class="block mb-2 text-sm">
+                        Mensaje
+                    </label>
+
+                    <textarea name="message" required rows="6" placeholder="Cuéntame sobre tu proyecto..."
+                        class="w-full px-4 py-4 rounded-lg border border-white/15 bg-transparent resize-none focus:outline-none focus:border-accent">{{ old('message') }}</textarea>
+                </div>
+
+                <button type="submit"
+                    class="inline-flex items-center justify-center px-8 py-4 border border-white rounded-lg font-medium hover:bg-white hover:text-bg-primary transition">
+                    Enviar mensaje
+                </button>
+
+            </form>
+
+            <div class="mt-12 pt-8 border-t border-white/15 text-center">
+
+                <p class="text-text-secondary">
+                    O escríbeme directamente a
+                </p>
+
+                <a href="mailto:reqquxui@gmail.com" class="text-accent font-medium mt-2 inline-block">
+                    reqquxui@gmail.com
                 </a>
 
             </div>
 
         </div>
 
-        <div class="mt-8 pt-8 border-t border-white/15">
+    </section>
 
-            <p class="text-sm text-text-secondary">
-                © {{ date('Y') }} Diego Requena. Todos los derechos reservados.
-            </p>
+
+    <footer class="border-t border-white/15">
+
+        <div class="container-custom py-12">
+
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+
+                <!-- Info -->
+                <div>
+
+                    <h3 class="text-xl font-semibold">
+                        Diego Requena
+                    </h3>
+
+                    <p class="text-text-secondary mt-2">
+                        UX/UI Designer & Web Designer
+                    </p>
+
+                </div>
+
+                <!-- Navegación -->
+                <div class="flex flex-wrap gap-6">
+
+                    <a href="#about" class="hover:text-accent transition">
+                        Sobre mí
+                    </a>
+
+                    <a href="#projects" class="hover:text-accent transition">
+                        Casos reales
+                    </a>
+
+                    <a href="#contact" class="hover:text-accent transition">
+                        Contacto
+                    </a>
+
+                </div>
+
+                <!-- Redes -->
+                <div class="flex items-center gap-4">
+
+                    <a href="https://www.instagram.com/reqq.ux/" target="_blank">
+                        <img src="{{ asset('icons/instagram.svg') }}" alt="Instagram" class="w-5 h-5">
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/diegoreqmec/" target="_blank">
+                        <img src="{{ asset('icons/linkedin.svg') }}" alt="LinkedIn" class="w-5 h-5">
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="mt-8 pt-8 border-t border-white/15">
+
+                <p class="text-sm text-text-secondary">
+                    © {{ date('Y') }} Diego Requena. Todos los derechos reservados.
+                </p>
+
+            </div>
 
         </div>
 
-    </div>
-
-</footer>
+    </footer>
 @endsection

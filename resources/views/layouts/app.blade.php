@@ -12,5 +12,13 @@
 
     @yield('content')
 
+    @if ($errors->any())
+    <script>
+        window.addEventListener('load', () => {
+            document.getElementById('contact-form')
+                ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    </script>
+    @endif
 </body>
 </html>
